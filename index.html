@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Personal Expanses</title>
+  </head>
+  <body>
+    <div class="d-flex align-items-center flex-column">
+      <!-- Page Title -->
+      <h2 class="p-2">Expanses Tracker</h2>
+      <!-- Here comes total balance container -->
+      <div class="d-flex align-items-center flex-column">
+        <h2>Total Balance</h2>
+        <h3>0.00 €</h3>
+      </div>
+
+      <!-- Income container -->
+      <div class="d-flex justify-content-center">
+        <h3 class="p-2">Income</h3>
+        <h3 class="p-2">0.00 €</h3>
+      </div>
+      <!-- Expanse container -->
+      <div class="d-flex justify-content-center">
+        <h3 class="p-2">Expanse</h3>
+        <h3 class="p-2">0.00 €</h3>
+      </div>
+      <!-- Enter amount and chooce option for expanse or income -->
+      <div class="d-flex justify-content-center flex-column">
+        <h3 class="p-2">Add new transaction</h3>
+        <!-- form to enter data for expanses tracker -->
+        <form class="d-flex align-items-center flex-column">
+          <div class="form-group">
+            <label for="text">Type or chooce from list:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="text"
+              placeholder="Enter text..."
+            />
+          </div>
+          <div class="form-group">
+            <label for="text">Enter amount:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="number"
+              placeholder="Enter amount..."
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <!-- History -->
+      <div class="d-flex justify-content-center flex-column">
+        <h3 class="p-2">History</h3>
+        <ul class="list-group"></ul>
+      </div>
+    </div>
+    <!-- Boostrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
