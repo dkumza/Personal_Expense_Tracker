@@ -13,58 +13,68 @@
     />
     <title>Personal Expanses</title>
   </head>
-  <body>
-    <div class="d-flex align-items-center flex-column">
-      <!-- Page Title -->
-      <h2 class="p-2">Expanses Tracker</h2>
-      <!-- Here comes total balance container -->
-      <div class="d-flex align-items-center flex-column">
-        <h2>Total Balance</h2>
-        <h3>0.00 €</h3>
-      </div>
+  <body class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card card-body mt-4">
+            <h2 class="pb-4">Expanses Tracker</h2>
+            <div class="card card-body text-center mb-4">
+              <h3>Total Balance</h3>
+              <h4 class="pb-3">0.00 €</h4>
+              <!-- Income container -->
+              <div class="card card-body mb-2">
+                <div class="d-flex justify-content-between">
+                  <h3>Income</h3>
+                  <h3>0.00 €</h3>
+                </div>
+              </div>
+              <!-- Expanse container -->
+              <div class="card card-body">
+                <div class="d-flex justify-content-between">
+                  <h3>Expanse</h3>
+                  <h3>0.00 €</h3>
+                </div>
+              </div>
+            </div>
 
-      <!-- Income container -->
-      <div class="d-flex justify-content-center">
-        <h3 class="p-2">Income</h3>
-        <h3 class="p-2">0.00 €</h3>
-      </div>
-      <!-- Expanse container -->
-      <div class="d-flex justify-content-center">
-        <h3 class="p-2">Expanse</h3>
-        <h3 class="p-2">0.00 €</h3>
-      </div>
-      <!-- Enter amount and chooce option for expanse or income -->
-      <div class="d-flex justify-content-center flex-column">
-        <h3 class="p-2">Add new transaction</h3>
-        <!-- form to enter data for expanses tracker -->
-        <form class="d-flex align-items-center flex-column">
-          <div class="form-group">
-            <label for="text">Type or chooce from list:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="text"
-              placeholder="Enter text..."
-            />
+            <!-- Input data container -->
+            <div class="card card-body mb-4">
+              <h3 class="pb-3">Add new transaction</h3>
+              <form class="input-form">
+                <div class="form-group">
+                  <label for="text">Type or chooce from list:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="text"
+                    placeholder="Enter text..."
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="text">Enter amount:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="number"
+                    placeholder="Enter amount..."
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  Submit
+                </button>
+              </form>
+            </div>
+
+            <!-- History container -->
+            <div class="card card-body mb-4">
+              <h4 class="pb-3">History</h4>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="text">Enter amount:</label>
-            <input
-              type="number"
-              class="form-control"
-              id="number"
-              placeholder="Enter amount..."
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-      <!-- History -->
-      <div class="d-flex justify-content-center flex-column">
-        <h3 class="p-2">History</h3>
-        <ul class="list-group"></ul>
+        </div>
       </div>
     </div>
+
     <!-- Boostrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

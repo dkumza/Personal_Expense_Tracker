@@ -1,5 +1,9 @@
-# My first JavaScript project - Personal Expanses Tracker.
+# Personal Expanses Tracker
 
-- Using Boostrap (1st time too)
-- Will use Charts.js for data
-- And other stuff will be pure Vanilla JS.
+My very first "Expanses Tracker" project.
+
+Technologies I am using:
+
+- Bootstrap (1st time too) for CSS
+- Charts.js for data
+- JavaScript (no framework)
