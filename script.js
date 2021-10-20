@@ -15,8 +15,37 @@ const dummyTransactions = [
 
 let transactions = dummyTransactions;
 
+// Add transaction
+function addTransaction(e) {
+  e.preventDefault();
+
+  if (text.value.trim() === '' || amount.value.trim() === '') {
+    alert('Please add a text and amount');
+  } else {
+    const transaction = {
+      id: generateID(),
+      text: text.value,
+      amount: +amount.value
+    }
+
+    transactions.push(transaction);
+
+    addTransactionDOM(transaction);
+
+    updateValues();
+
+    text.value = '';
+    amount.value = '';
+   }
+}
+
+// Generate random ID 
+function generateID() {
+  return Math.floor(Math.random() * 100000000);
+}
+
 // Add expense to History list (DOM):
-function addTransaction(transaction) {
+function addTransactionDOM(transaction) {
   // gets positive or negative sign from input field (id="amount")
   // const getSign = transaction.amount < 0 ? '-' : '+';
 
@@ -27,9 +56,9 @@ function addTransaction(transaction) {
     item.classList.add('list-group-item','d-flex', 'justify-content-between', 'align-items-center', 'list-group-item-success', 'mb-1', 'py-1');
   } else { item.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'list-group-item-danger', 'mb-1', 'py-1');}
     
-  item.innerHTML = `${transaction.text} <span>${transaction.amount}<button class="btn bi bi-trash ml-2 px-0 py-0" "onclick="removeTransaction(${
-    transaction.id
-  })"></button> <button class="btn bi bi-pencil ml-2 px-0 py-0"></button> </span>`;
+  item.innerHTML = `${transaction.text} 
+    <span>${transaction.amount}<button class="btn bi bi-trash ml-2 px-0 py-0"onclick="removeTransaction(${transaction.id})"></button></span>`;
+    // <button class="btn bi bi-pencil ml-2 px-0 py-0"></button> 
 
   history.appendChild(item);
 }
@@ -56,14 +85,22 @@ function updateValues() {
   money_out.innerText = `${expense} €`;
 }
 
+// Remove transaction by ID
+function removeTransaction(id) {
+  transactions = transactions.filter(transaction => transaction.id !== id);
+
+  init();
+}
 
 // Init app
 function init() {
   history.innerHTML = '';
   
-  transactions.forEach(addTransaction);
+  transactions.forEach(addTransactionDOM);
 
   updateValues();
 }
 
 init();
+
+form.addEventListener('submit', addTransaction);
