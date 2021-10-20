@@ -1,6 +1,6 @@
-# Personal Expanses Tracker
+# Personal Expense Tracker
 
-My very first "Expanses Tracker" project.
+My very first "Expense Tracker" project.
 
 Technologies I am using:
 
