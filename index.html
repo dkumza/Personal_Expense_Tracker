@@ -11,37 +11,42 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
+    />
     <title>Personal Expanse Tracker</title>
   </head>
   <body class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-md-8 mx-auto">
-          <div class="card card-body mt-4">
-            <h2 class="pb-4 text-center">Expense Tracker</h2>
-            <div class="card card-body text-center mb-4">
+          <div class="card card-body mt-2">
+            <!-- <h3 class="pb-2 text-center">Expense Tracker</h3> -->
+            <div class="card card-body text-center mb-2">
+              <!-- BALANCE TAB -->
               <h4>Total Balance</h4>
-              <h4 class="pb-3">0.00 €</h4>
+              <h4 id="balance" class="pb-2">0.00 €</h4>
               <!-- Income container -->
-              <div class="card card-body mb-2">
+              <div class="card mb-1 pt-2 px-3">
                 <div class="d-flex justify-content-between">
-                  <h4>Income</h4>
-                  <h4 class="text-success">0.00 €</h4>
+                  <h5>Income</h5>
+                  <h5 id="income" class="text-success">0.00 €</h5>
                 </div>
               </div>
               <!-- Expanse container -->
-              <div class="card card-body">
+              <div class="card mb-2 pt-2 px-3">
                 <div class="d-flex justify-content-between">
-                  <h4>Expense</h4>
-                  <h4 class="text-danger">0.00 €</h4>
+                  <h5>Expense</h5>
+                  <h5 id="expense" class="text-danger">0.00 €</h5>
                 </div>
               </div>
             </div>
 
             <!-- Input data container -->
-            <div class="card card-body mb-4">
-              <h4 class="pb-3">Add new transaction</h4>
-              <form class="input-form">
+            <div class="card card-body mb-2">
+              <h4 class="pb-1 text-center">Add New Transaction</h4>
+              <form id="form" class="input-form">
                 <div class="form-group">
                   <label for="text">Type or chooce from list:</label>
                   <input
@@ -67,8 +72,16 @@
             </div>
 
             <!-- History container -->
-            <div class="card card-body mb-4">
-              <h4 class="pb-3 text-center">History</h4>
+            <div class="card card-body mb-2">
+              <h4 class="pb-1 text-center">History</h4>
+              <ul id="history" class="list-group">
+                <!-- <li class="list-group-item list-group-item-success mb-1">
+                  Bred
+                </li>
+                <li class="list-group-item list-group-item-danger mb-1">
+                  Coke
+                </li> -->
+              </ul>
             </div>
           </div>
         </div>
@@ -91,5 +104,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script> -->
+    <script src="script.js"></script>
   </body>
 </html>
